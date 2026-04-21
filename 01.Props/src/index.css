@@ -1,0 +1,38 @@
+*{
+  padding: 0%;
+  margin:0%;
+}
+body{
+  background-color: black;
+  color: white;
+}
+.profileImg{
+  height: 100px;
+  width:100px;
+  border-radius: 50%;
+  object-fit: cover;
+
+}
+.btn{
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: black;
+  background-color: white;
+}
+.card{
+  height: 350px;
+  width: 300px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.parent{
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
