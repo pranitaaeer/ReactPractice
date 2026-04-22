@@ -3,6 +3,9 @@ import '../style/card.css'
 import {cardData}  from '../data/data.js'
 console.log("data",cardData);
 const Card = ({available,price,imageUrl,name,role,skills,description}) => {
+     const onclikHandeler= (name)=>{
+     alert(`Wlcome to ${name}'s profile`)
+    }
   return (
     <div className='parent'>
             <div className='card1' >
