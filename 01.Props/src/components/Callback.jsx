@@ -1,6 +1,6 @@
 import React,{useState,useCallback} from 'react'
 import Child from "./Child.jsx"
-export function callback () {
+export function Callback () {
 
   const [count, setCount]=useState(0)
   const cb=useCallback (() =>{
