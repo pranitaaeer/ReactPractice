@@ -1,9 +1,9 @@
-import React,{usestate} from 'react'
+import React,{usestate,useCallback} from 'react'
 import Child from "./Child.jsx"
 export function callback () {
 
   const [count, setCount]=usestate(0)
-  const cb=usecallback (() =>{
+  const cb=useCallback (() =>{
     function handlclick() {
     console.log("clicked") 
   }
