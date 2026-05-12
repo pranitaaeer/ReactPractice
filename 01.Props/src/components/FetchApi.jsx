@@ -4,8 +4,8 @@ export function FetchApi() {
   
   const [data, setData]=useState([]) 
   
-  useEffect=(() =>{
-  const res=fetch("https://jsonplaceholder.typicode.com/users") 
+  useEffect(async() =>{
+  const res=await fetch("https://jsonplaceholder.typicode.com/users") 
    setData(res.json()) 
  }, []) 
   
@@ -13,10 +13,12 @@ export function FetchApi() {
     <>
     <div>
       {data.map((elm, i)=>{
-      <div key={i}>
-        <h1>{elm.name}</h1>
-        <p>{elm.email}</p>
-      </div>
+       return (
+         <div key={i}>
+          <h1>{elm.name}</h1>
+          <p>{elm.email}</p>
+        </div>
+       ) 
       }}
     </div>
     </>
