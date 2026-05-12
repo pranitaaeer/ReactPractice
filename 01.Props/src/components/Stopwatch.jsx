@@ -1,3 +1,4 @@
+
 import React, {useState,useEffect} from "react"
 
 export function Stopwatch () {
@@ -7,9 +8,9 @@ export function Stopwatch () {
  useEffect (() =>{
    let timer;
    if(run) {
-     timer=setInterval ((
+     timer=setInterval (() =>{
        setTimer ((prev)=>prev+1) 
-     )=>,1000) 
+     }, 1000) 
    }
    return () =>{
      clearInterval(timer) 
@@ -18,14 +19,10 @@ export function Stopwatch () {
   
   return (
     <>
-    <button onClick={setRun(true)}>start</button>
-   <button onClick={setRun(false)}>stop</button>
-   <button onClick={setTimer(0)}>Restart</button>
-    
+    <div>{timer}</div>
+    <button onClick={() => setRun(true)}>start</button>
+    <button onClick={() => setRun(false)}>stop</button>
+    <button onClick={() => setTimer(0)}>Restart</button>
     </> 
   ) 
 }
-
-
-
-
